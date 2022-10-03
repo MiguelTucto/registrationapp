@@ -1,6 +1,6 @@
 <template>
   <div class="h-5rem"></div>
-  <div class="surface-card p-4 shadow-2 border-round top texto  " >
+  <div class="surface-card p-4 shadow-2 border-round w-full lg:w-5  texto  " >
     <div class="text-center mb-5">
       <div class="text-900 text-3xl font-medium mb-3">Put Information</div>
     </div>

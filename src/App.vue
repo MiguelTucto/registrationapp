@@ -16,7 +16,9 @@ export default {
       drawer: false,
       items: [
         {label: "Home", to: "/home"},
-        {label: "Client", to:"/client"}
+        {label: "Client", to:"/client"},
+        {label: "Login", to:"/login"},
+        {label: "Test", to:"/test"}
       ],
     };
   },
