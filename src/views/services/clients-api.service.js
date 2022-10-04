@@ -1,7 +1,7 @@
 import http from "../../core/services/http-common";
 
 class ClientsApiService {
-  getAll(){
+  getAll() {
     return http.get("/clients");
   }
 }

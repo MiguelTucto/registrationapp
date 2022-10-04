@@ -2,15 +2,16 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import PrimeVue from "primevue/config";
+import Timeline from 'primevue/timeline';
 
 // PrimeVue Styles
-import "primevue/resources/themes/bootstrap4-dark-blue/theme.css";
+import "primevue/resources/themes/lara-dark-blue/theme.css";
 import "primevue/resources/primevue.min.css";
 import "primeicons/primeicons.css";
 // PrimeFlex Companion
 import "primeflex/primeflex.css";
 
-
+import Tooltip from "primevue/tooltip";
 import MultiSelect from "primevue/multiselect";
 import Fieldset from "primevue/fieldset";
 import Textarea from "primevue/textarea";
@@ -41,10 +42,10 @@ import Checkbox from "primevue/checkbox";
 import Chip from "primevue/chip";
 import ToastService from "primevue/toastservice";
 
-
 const app = createApp(App);
 
-app.config.devtools = true
+app.config.devtools = true;
+app.directive("tooltip", Tooltip);
 app.use(router);
 // PrimeVue Configuration
 app.use(PrimeVue, { ripple: true });
@@ -52,6 +53,7 @@ app.use(PrimeVue, { ripple: true });
 app.use(ToastService);
 
 // PrimeVue Components
+app.component("pv-timeline", Timeline);
 app.component("pv-multi-select", MultiSelect);
 app.component("pv-field", Fieldset);
 app.component("pv-data-table", DataTable);
@@ -79,7 +81,7 @@ app.component("pv-calendar", Calendar);
 app.component("pv-autocomplete", AutoComplete);
 app.component("pv-chip", Chip);
 app.component("pv-upload", FileUpload);
-app.component("pv-data-view-layout-options", DataViewLayoutOptions)
+app.component("pv-data-view-layout-options", DataViewLayoutOptions);
 // App mounting
 
 app.mount("#app");
